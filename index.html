@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baekshook Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body class="bg-blue-100">
+    <header
+      class="bg-red-100 flex justify-between items-center shadow-sm md:mx-24"
+    >
+      <h1 class="text-5xl InkLipquid font-bold px-96">Baekshook Portfolio</h1>
+      <div class="bg-green-100 text-center flex flex-col justify-center">
+        <img
+          class="weatherIcon"
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          alt="Weather Icon"
+        />
+        <span class="cityTemp">Seoul, 22℃</span>
+      </div>
+    </header>
+    <main class="md:mx-24">
+      <div
+        class="introduceMessage bg-yellow-100 text-2xl font-bold px-4 py-12 md:text-6xl md:px-12 md:py-36 md:mx-24 md:my-36 hover:bg-yellow-200 cursor-pointer"
+        onclick="onClickIntroduce()"
+      >
+        안녕하세요, 프론트엔드 개발자 Baekshook입니다.
+      </div>
+      <div class="bg-orange-100">
+        <h2 class="text-center text-2xl text-bold">About Me</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center mt-8">
+          <img class="w-60 md:w-96" src="./BLOCKCHAIN.png" alt="Me" />
+          <ul class="md:ml-16 md:text-4xl">
+            <li class="mt-4">Code Name: Baekshook</li>
+            <li class="bg-blue-100 mt-4 w-full px-8">
+              ✅ HTML / CSS / JAVASCRIPT
+            </li>
+            <li class="bg-blue-100 mt-4 w-full px-8">✅ React</li>
+            <li class="bg-blue-100 mt-4 w-full px-8">✅ Solidity</li>
+            <li class="my-4">즐기면서 배우고, 배우면서 즐겨라✏️</li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="flex md:flex-col w-screen overflow-scroll md:overflow-hidden snap-x snap-mandatory text-center max-w-screen-lg mx-auto"
+      >
+        <div class="flex-shrink-0 w-screen snap-center md:my-16">
+          <img src="BlockChain.jpeg" alt="프로젝트1" />
+          <div class="mt-4 text-xl font-bold md:text-4xl">
+            우리문화 살리기 프로젝트
+          </div>
+          <button
+            class="bg-green-300 px-4 py-2 mt-2 rounded-xl md:text-2xl"
+            onclick="onClickOpenModal('project1')"
+          >
+            더 보기
+          </button>
+        </div>
+        <div class="flex-shrink-0 w-screen snap-center md:my-16">
+          <img src="React.jpeg" alt="프로젝트2" />
+          <div class="mt-4 text-xl font-bold md:text-4xl">
+            우리문화 살리기 프로젝트
+          </div>
+          <button
+            class="bg-pink-300 px-4 py-2 mt-2 rounded-xl md:text-2xl"
+            onclick="onClickOpenModal('project2')"
+          >
+            더 보기
+          </button>
+        </div>
+        <div class="flex-shrink-0 w-screen snap-center md:my-16">
+          <img src="javascript.jpeg" alt="프로젝트3" />
+          <div class="mt-4 text-xl font-bold md:text-4xl">
+            우리문화 살리기 프로젝트
+          </div>
+          <button
+            class="bg-purple-300 px-4 py-2 mt-2 rounded-xl md:text-2xl"
+            onclick="onClickOpenModal('project3')"
+          >
+            더 보기
+          </button>
+        </div>
+      </div>
+    </main>
+    <div
+      class="modalDetail bg-black bg-opacity-40 w-screen min-h-screen fixed top-0 hidden justify-center items-center"
+    >
+      <div
+        class="bg-white py-8 w-3/4 md:w-1/2 text-center text-2xl md:text-4xl"
+      >
+        <h3 class="modalTitle">프로젝트 명</h3>
+        <ul class="modalContents text-sm"></ul>
+        <button
+          class="bg-red-300 px-8 py-4 rounded-full mt-8"
+          onclick="onClickCloseModal()"
+        >
+          닫기
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
